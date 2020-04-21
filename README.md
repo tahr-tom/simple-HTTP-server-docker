@@ -9,7 +9,7 @@ Written in Go with [Go-Chi](https://github.com/go-chi/chi)
 ##  Endpoints
 ### `GET /list`
 
-accept a GET request and return a JSON response, each objects include two string, namely `key` and `value` and a `timestamp` 
+Accept a GET request and return a JSON response, each objects include two string, namely `key` and `value` and a `timestamp` 
 
 The objects are sorted in descending order by `timestamp`
 
@@ -35,9 +35,9 @@ Output with formatting
 ]
 ```
 
-This two item is hardcoded in the server the demonstration purpose
+This two items are hardcoded in the server the demonstration purpose
 ### `POST /add`
- accept a POST request with json payload that includes two string attribute `key` and `value`
+Accept a POST request with json payload that includes two string attribute `key` and `value`
 #### Example
 Running
 ```shell script
