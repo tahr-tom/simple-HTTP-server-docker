@@ -3,8 +3,8 @@ Written in Go with [Go-Chi](https://github.com/go-chi/chi)
 ## Getting Started
 1. Install [Docker](https://docs.docker.com/install/)
 2. Clone this repository
-3. In the repository directory, run `docker build -t test-server .`
-4. Start the container with `docker run --rm -p 80:80 test-server`
+3. In the repository directory, run `$ docker build -t test-server .`
+4. Start the container with `$ docker run --rm -p 80:80 test-server`
 5. Now the server should be running on http://localhost
 ##  Endpoints
 ### `GET /list`
@@ -17,7 +17,7 @@ The objects are sorted in descending order by `timestamp`
 
 Running
 ```shell script
-curl http://localhost/list | python -m json.tool
+$ curl http://localhost/list | python -m json.tool
 ```
 Output with formatting
 ```json
@@ -41,22 +41,22 @@ Accept a POST request with json payload that includes two string attribute `key`
 #### Example
 Running
 ```shell script
-curl --header "Content-Type: application/json" \
-  --request POST \
-  --data '{"key": "key a", "value": "value a"}' \
-  http://localhost:80/add
+$ curl --header "Content-Type: application/json" \
+      --request POST \
+      --data '{"key": "key a", "value": "value a"}' \
+      http://localhost:80/add
 
-curl --header "Content-Type: application/json" \
-  --request POST \
-  --data '{"key": "key b", "value": "value b"}' \
-  http://localhost:80/add
+$ curl --header "Content-Type: application/json" \
+      --request POST \
+      --data '{"key": "key b", "value": "value b"}' \
+      http://localhost:80/add
 
-curl --header "Content-Type: application/json" \
-  --request POST \
-  --data '{"key": "key c", "value": "value c"}' \
-  http://localhost:80/add
+$ curl --header "Content-Type: application/json" \
+      --request POST \
+      --data '{"key": "key c", "value": "value c"}' \
+      http://localhost:80/add
 
-curl http://localhost/list | python -m json.tool
+$ curl http://localhost/list | python -m json.tool
 ```
 Output with formatting
 ```json
